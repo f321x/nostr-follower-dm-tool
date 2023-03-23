@@ -16,9 +16,9 @@ def main_function(private_key_b32: str, message: str):
         relay_manager = RelayManager()
         relay_manager.add_relay("wss://nos.lol")
         relay_manager.add_relay("wss://relay.damus.io")
-        relay_manager.add_relay("wss://nostr_old-pub.wellorder.net")
+        relay_manager.add_relay("wss://nostr-pub.wellorder.net")
         relay_manager.add_relay("wss://relay.snort.social")
-        relay_manager.add_relay("wss://relay.nostr_old.band")
+        relay_manager.add_relay("wss://relay.nostr.band")
         private_key = PrivateKey().from_nsec(private_key_b32)
         user_pub_key = private_key.public_key.hex()
 
