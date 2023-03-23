@@ -1,0 +1,3 @@
+[submodule "nostr"]
+	path = nostr
+	url = https://github.com/jeffthibault/python-nostr/tree/main/nostr

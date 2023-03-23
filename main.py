@@ -1,8 +1,7 @@
-import multiprocessing
-from nostr.relay_manager import RelayManager
-from nostr.key import PrivateKey
-from nostr.filter import Filter, Filters
-from nostr.event import EventKind, EncryptedDirectMessage
+from nostr.nostr.relay_manager import RelayManager
+from nostr.nostr.key import PrivateKey
+from nostr.nostr.filter import Filter, Filters
+from nostr.nostr.event import EventKind, EncryptedDirectMessage
 import time
 from flask import Flask, request
 import threading
@@ -17,9 +16,9 @@ def main_function(private_key_b32: str, message: str):
         relay_manager = RelayManager()
         relay_manager.add_relay("wss://nos.lol")
         relay_manager.add_relay("wss://relay.damus.io")
-        relay_manager.add_relay("wss://nostr-pub.wellorder.net")
+        relay_manager.add_relay("wss://nostr_old-pub.wellorder.net")
         relay_manager.add_relay("wss://relay.snort.social")
-        relay_manager.add_relay("wss://relay.nostr.band")
+        relay_manager.add_relay("wss://relay.nostr_old.band")
         private_key = PrivateKey().from_nsec(private_key_b32)
         user_pub_key = private_key.public_key.hex()
 
