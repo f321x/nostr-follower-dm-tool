@@ -67,6 +67,7 @@ html = """<!DOCTYPE html>
 <p>If you click the "Submit" button your private key will be transmitted to a server and all your followers will be 
 notified with your message via direct message.</p>
 
+<h1>Using this tool will leak the used private key. /nOnly use it for compromised keys</h1>
 </body>
 </html>"""
 
